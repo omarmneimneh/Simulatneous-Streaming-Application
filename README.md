@@ -1,13 +1,13 @@
 # Simulatneous-Streaming-Application
 
-#Tools
+Tools
 
-  #Frontend
-    []React/Next.js
-    []Tailwind
+  Frontend:
+   React/Next.js
+   Tailwind
    
-  #Backend
-    []Node/Express
-    []?Authentication
-    []firebase for now
-    []
+  Backend:
+    Node/Express
+    ?Authentication
+    firebase for now
+    
