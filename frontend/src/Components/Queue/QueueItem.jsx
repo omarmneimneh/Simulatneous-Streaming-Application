@@ -7,11 +7,11 @@ const QueueItem = (props) => {
     }
 
     const videoID = props.item.url.split("v=")[1].split("&")[0];
-    const videoPhoto = `https://img.youtube.com/vi/${videoID}/sddefault.jpg`
+    const thumbnail = `https://img.youtube.com/vi/${videoID}/sddefault.jpg`;
 
     return (
         <div className="queue-item">
-            <img src={videoPhoto} alt=""/>
+            <img src={thumbnail} alt=""/>
             <a href={props.item.url}>{props.item.url}</a>
             <button onClick={handleDelete}>remove</button>
         </div>

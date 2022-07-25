@@ -4,7 +4,6 @@ import QueueItem from './QueueItem';
 
 const Queue = (props) => {
     const[urlInput, setUrlInput] = useState("");
-    const[fakeQueue, setFakeQueue] = useState([]);
     //handle adding items to queues
     const handleAdding = (e) => {
         e.preventDefault();
