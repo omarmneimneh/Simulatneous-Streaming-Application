@@ -1,0 +1,6 @@
+.player {
+    width: 60%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
