@@ -4,10 +4,12 @@
   box-sizing: border-box;
 }
 
+/* #1c1f33*/
 body {
-  background-color: white;
+  background-color: #212d40;
   width: 100%;
   height: 100%;
+  color: #eff1ed;
 }
 
 .App {
@@ -15,4 +17,10 @@ body {
   height: 100%;
 }
 
+.wrapper,
+.player,
+.queue{
+  border-color: red;
+  border-style: solid;
+}
 

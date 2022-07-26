@@ -8,12 +8,16 @@ const Queue = (props) => {
     const handleAdding = (e) => {
         e.preventDefault();
         console.log(urlInput);
+
         props.setQueue([...props.queue, {
             url: urlInput,
             id: Math.random() * 100
         }]);
+        //clear hook and input box
+        document.getElementById("inputBox").value = "";
         setUrlInput("");
     }
+
 
     //handles pasting links
     const inputChange = (e) => {
@@ -37,7 +41,7 @@ const Queue = (props) => {
             }
             )}
         </ul>
-        <input type="url" onChange={inputChange}placeholder="Paste video link here.." />
+        <input id="inputBox" type="url" onChange={inputChange}placeholder="Paste video link here.." />
         <button onClick={handleAdding}>Add Video</button>
         </div>
     ); 

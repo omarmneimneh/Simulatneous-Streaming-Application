@@ -6,9 +6,14 @@ const QueueItem = (props) => {
         console.table(props.queue);
     }
 
-    const videoID = props.item.url.split("v=")[1].split("&")[0];
-    const thumbnail = `https://img.youtube.com/vi/${videoID}/sddefault.jpg`;
+    //TODO: type check for valid youtube url
+    // const videoID = props.item.url.split("v=")[1].split("&")[0];
+    // const thumbnail = `https://img.youtube.com/vi/${videoID}/sddefault.jpg`;
 
+    const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = props.item.url.match(regExp);
+    const thumbnail = `https://img.youtube.com/vi/${match[2]}/sddefault.jpg`;
+    
     return (
         <div className="queue-item">
             <img src={thumbnail} alt=""/>
@@ -19,3 +24,6 @@ const QueueItem = (props) => {
 }
 
 export default QueueItem;
+
+
+//https://www.youtube.com/watch?v=CKker83XzG4
