@@ -35,3 +35,11 @@ body {
   border-style: solid;
 }
 
+button, input{
+  background-color: #EDF7F6;
+  border-radius: 5px;
+  color: #0F0F0F;
+  padding: 2px 5px;
+  font-size: .8em;
+}
+
