@@ -33,7 +33,7 @@ const Queue = (props) => {
             <ul>
                 {props.queue.map((item, index) => {
                     return (
-                        <li key={index}>
+                        <li key={item.id}>
                             <QueueItem
                                 class='input'
                                 item={item}
@@ -47,7 +47,7 @@ const Queue = (props) => {
             </ul>
             <input id="inputBox" type="url" onChange={inputChange} placeholder="Paste video link here.." />
             <button onClick={handleAdding}>Add Video</button>
-            <button onClick={props.skip}>Next</button>
+            <button onClick={props.ended}>Next</button>
         </>
     );
 }

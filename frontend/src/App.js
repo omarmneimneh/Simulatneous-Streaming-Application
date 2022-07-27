@@ -7,12 +7,13 @@ import NavBar from "./Components/NavBar/NavBar";
 const App = () => {
   const [url, setUrl] = useState("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
   const [queue, setQueue] = useState([]);
+
   const handleEnded = () => {
     if (queue.length > 0) {
+      console.table(queue[0]);
       setUrl(queue.shift().url);
     }
   };
-
   return (
     <div className="App">
       <div className="navbar">{/* <NavBar /> */}</div>
@@ -22,7 +23,7 @@ const App = () => {
           setUrl={setUrl}
           queue={queue}
           setQueue={setQueue}
-          onEnded={handleEnded}
+          handleEnded={handleEnded}
         />
       </div>
       <div className="queue">
@@ -30,7 +31,7 @@ const App = () => {
           queue={queue}
           setQueue={setQueue}
           setUrl={setUrl}
-          skip={handleEnded}
+          ended={handleEnded}
         />
       </div>
     </div>
